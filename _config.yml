@@ -9,27 +9,22 @@ lang: en
 # Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
 timezone:
 
-title: Andy's blog
+title: Andy's Blog
 
-tagline: About tech and everything
+tagline: Swift,&nbsp;iOS,&nbsp;Teamleading
 
 description: >- 
-  Andy's blog about tech and everything
+  A personal blog about Swift, iOS, team leading, and life in general by Andrei Iakovlev (Andy for short).
 
 url: "https://qstrnd.github.io"
 
 github:
   username: qstrnd
 
-twitter:
-  username: qstrnd
-
 social:
-  name: Andy (qstrnd)
+  name: Andrei (Andy) Iakovlev 
   email: a.iakovlev@proton.me
   links:
-    - https://x.com/qstrnd
-    - https://github.com/qstrnd
     - https://www.linkedin.com/in/qstrnd
     
 # Pageviews settings
