@@ -26,10 +26,15 @@ social:
   email: a.iakovlev@proton.me
   links:
     - https://www.linkedin.com/in/qstrnd
-    
+
+# Web Analytics Settings
+analytics:
+  goatcounter:
+    id: qstrnd
+ 
 # Pageviews settings
 pageviews:
-  provider: # now only supports 'goatcounter'
+  provider: qstrnd
 
 # Prefer color scheme setting.
 #
