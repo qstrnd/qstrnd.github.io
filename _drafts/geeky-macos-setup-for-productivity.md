@@ -9,6 +9,16 @@ In this post, I would like to share my macOS setup, which I have developed over 
 
 I'd like to note that I describe my own setup and don't urge you to copy it word by word. You may tweak individual shortcuts as you want and you may skip the whole sections altogether. The goal is to show you what I found useful and what you might have not thought of, and in no way to force you to thoughtlessly copy the approaches. Use this info to help you build your own! Believe me, it's a fun never-ending story.
 
+## Principles
+
+What you may find here can seem too much. And it may seem there are other ways to make it more conveniently. I don't want to argue. You may follow your own understanding what convenience and beauty is and what suits your needs best. What I want to highlight again, however, is that I didn't get from a newbie to the current state in my relationship with the computer in a night. Not even in a year. So as my relashionship matured, I tried and learned new approaches and adjusted the way I interact with my computer. What guided me, as I believe, were the following principles:
+
+1. Reduce repetitiveness.
+2. Try to make it faster.
+3. Explore what others do and see how it suits me.
+
+Guided by this principles, I learn shortcuts for the interactions I do the most, write scripts for something that needs automation, look at documentation and available extensions and so forth. 
+
 ## General
 
 The first thing I do when I install my operating system is that I download [Raycast](https://www.raycast.com/). Why? Because it completely changes the way I interact with my laptop. I configure it so that it replaces Spotlight and can be opened by pressing `⌘` + `␣` (`Command` + `Space`). Some people prefer Alfred for similar reasons, but I stick with Raycast since it allows extensions with its free version. When I miss in the free version is the ability to sync the setup across devices, but it hasn't been a big issue for me.
