@@ -399,33 +399,63 @@ And in case you wonder what theme I use, it's called [Firefox Alpenglow](https:/
 
 ## Miscellaneous 
 
-- pomodoro
-- toggl
-- appcleaner
-- quick notes
-- bartender
-- more space
-- hazel
-- currency converter, weather
-- cpu, memory, battery and other diagnostics
+I would assume that you use macOS so below there will be links to the macOS App Store if the will be no separate website for the app.
 
+#### Pomodoro Timer
 
-General principles
-- learn shortcuts
-- customize to your needs
-- look for extensions
+I use the [Pomodoro Technique](https://en.wikipedia.org/wiki/Pomodoro_Technique) at work and for personal activities. I work concentrated during 25 minutes, then make a pause for 5, then repeat for times, with the last time having a pause of 15 minutes instead. There are different applications, and I decided to stick with Raycast's buil-in Pomodoro. A also have a nice timer in the Menu Bar that comes with it.
 
-Tooling
-- Xcodes
-- App cleaner
-- disk something (to clear space)
-- puntoswitcher
-- daisydisk
-- wwdc
+#### Time Tracking
 
+Sometimes I use [Toggl](https://toggl.com/) to track how much time I devote to different projects and endeavors. It's a nice cross-platform app, it supports features like pomodoro and billing, so it's worth giving a try.
 
+#### Menu Bar
 
+If you feel your Menu Bar is a little cluttered, you can explore [Bartender](https://www.macbartender.com/) app. I don't use it, but I once tried and the idea itself was funny: to customize when and where you see the menu items in the upper-right corner of your screen. You can hide them, show different sets of them in different modes, customize spacing in between and more.
 
-gitworkflow
-commit philosophy
-make everything a repository
+#### Floating Notes
+
+I use Notion as my note-taking app, but sometimes there's the need to make and show notes in some lighter shape. That's where Raycast's built-in Floating Notes come in handy. I use it for the words that I jot down while watching a movie in a foreign language, some thought not to forget later, or even meeting notes when I share my screen and don't want to accitentally show my other notes since they may be private. Here's how it look right now for example:
+
+![img-description](assets/posts/geeky-macos-setup-for-productivity/img/floatingNotes.png)
+*Floating Notes*
+
+Apple's Quick Notes are good as well, but I don't use them since they appeared after I learned about Floating Notes.
+
+#### More Space
+
+I do have to mention it! I think my Mac's screen is big enough to fit more text and elements, so I go to the Display settings and enable higher rosolution (under More Space). Here you can compare it and decide wha't better for you:
+
+![img-description](assets/posts/geeky-macos-setup-for-productivity/img/lessSpace.png)
+*Default Space*  
+
+![img-description](assets/posts/geeky-macos-setup-for-productivity/img/moreSpace.png)
+*More Space*
+
+#### Keyboard Layout Mess
+
+For Russian-speaking users, it can be convenient to use apps like [Puntoswitcher](https://yandex.ru/soft/punto/mac/?noredirect=1). It can be handy to remap what you've entered in English into Russian and vice versa. Not sure if it sends some data to Yandex, that's why I don't use it myself now.
+
+#### Xcodes Management
+
+If you need to manage multiple installations of Xcode (which can be common at work), thre's a nice app called [Xcodes](https://github.com/XcodesOrg/XcodesApp). You can install and remove different versions and control when to update.
+
+![img-description](assets/posts/geeky-macos-setup-for-productivity/img/xcodes.png)
+*Xcodes*  
+
+#### WWDC
+
+You can access WWDC videos with Apple's official [website](https://developer.apple.com/videos/all-videos/) or [app](https://apps.apple.com/us/app/apple-developer/id640199958), but I'd recommend using this unofficial [WWDC app](https://github.com/insidegui/WWDC). It has really nice search, ability to make a watch list, bookmark sessions and add notes to them.
+
+![img-description](assets/posts/geeky-macos-setup-for-productivity/img/wwdc.png)
+*Unofficial WWDC app*
+
+#### Currency Conversion
+
+I just type something like `50 EUR to AMD` and it works out of the box. I think it's not even a Raycast feature but the system search feature, which is available even on iOS.
+
+#### Diagnostics & Stats
+
+I don't use widgets or special tools for diagnostics. The most "advanced" stuff I do here is to check what cycle count my battery has. But I do use Activity Monitor sometimes, mostly to find out what makes my Mac lag sometimes (and it goes lag, I experience crashes sometimes and so on — nothing is perfect).
+
+And I also enable battery percentage in the Menu Bar item. I still want to be precise about it.
