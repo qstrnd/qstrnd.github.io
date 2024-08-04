@@ -349,6 +349,44 @@ Many principles that I follow in my approach in dealing with the command line we
 
 ## Browser
 
+Browser is a special app that not only allows you to access the web, but with web-applications it becomes somewhat like an operating system in its own, so that many people prefer using web apps to their native counterparts. I personally use Firefox for my home environment and Chrome for my work environment. I gave up on using Safari for its lack of many extensions (though there are some really nice ones!). I won't compare different browsers here, but I can say that I value Firefox for being pretty lightweight, pretty customizable, and with privacy in focus.
+
+### Privacy
+
+I'm not very ideological, but I like to be cautious with what I share. If you want to learn more, check this public [Privacy Guide](https://www.privacyguides.org/en/basics/why-privacy-matters/). This website also contains some info about particular apps, as well as some tricks and techniques, and I found some of the recommendations useful.
+
+Besides choosing Firefox as my default browser, at some point I decided to use [DuckDuckGo](https://duckduckgo.com/) as my default search engine. It worked surprisingly well compared to others and currently covers my needs.
+
+I use [uBlock Origin](https://ublockorigin.com/), an extension that blocks not only ads, but also ad trackers. And as a second protection level I utilize [Ghostery](https://www.ghostery.com/). Aside of a few websites that require you to allow ads, the experience of browsing the web is much better with these extensions. It also makes your browsing a little more private.
+
+#### Security
+
+Where there's privacy, security should also follow suite. I won't cover it deeply, but would rather mention some very basics.
+
+I setup my browser following a privacy guide, as this one for [Firefox](https://www.privacyguides.org/en/desktop-browsers/#recommended-firefox-configuration). I sync my data via Firefox servers, except for passwords. I decided to store passwords in a separate place intentionally, and use [Bitwarden](https://bitwarden.com/) for it. I've got installed both the extension and the app. I use the free version, and it's enough to get all my devices synced, including iPhone, where Bitwarden can be selected as the default password manager and will provide autofill ability wherever it's supported.
+
+For some services, including social and financial ones, I setup 2FA (two-factor authentication) through an OTP (one-time password), which I [prefer over SMS](https://www.okta.com/blog/2020/05/why-you-should-ditch-sms-as-an-auth-factor/). There are plenty of apps that allow you to set up an OTP, among them are [Raivo](https://raivo-otp.com/) or [Google Authenticator](https://apps.apple.com/us/app/google-authenticator/id388497605).
+
+### Useful Extensions
+
+There are other extensions that I like a lot and use daily. I'll describe them a little below. The links below will direct either to the extension's website, where you can find a version for your browser of choice, or to the respective [Firefox Addons](https://addons.mozilla.org/en-US/firefox/) if I wouldn't be able to find one.
+
+| Extension | Description |
+| --- | --- |
+| [Vimium](https://vimium.github.io/) | A keyboard shortcut extension for navigation and control in the browser |
+| [Dark Reader](https://darkreader.org/) | Turns on dark mode for websites to reduce eye strain |
+| [Highlight by Trix](https://addons.mozilla.org/en-US/firefox/addon/highlight-by-trix/) | Allows you to highlight text on web pages for reference or emphasis. I use `⌥` + `H` (`Option` + `H`) to trigger it |
+| [Bonjourr - Minimalist Startpage](https://bonjourr.fr/) | A customizable, minimalist start page with weather and bookmarks (my favorite so far!) |
+| [DeepL Translate: Reading & Writing Translator](https://www.deepl.com/en/app) | Provides translations for reading and writing in multiple languages. I use `⌥` + `D` (`Option` + `D`) to translate a selected piece of text |
+| [History AutoDelete](https://addons.mozilla.org/en-US/firefox/addon/history-autodelete/) | Automatically deletes your browsing history based on rules you set |
+| [Pin Unpin Tab](https://addons.mozilla.org/en-US/firefox/addon/pinunpin-tab/) | Quickly pin or unpin tabs in the browser. I use `⌥` + `P` (`Option` + `P`) to toggle it |
+| [Close Other Tabs Button](https://addons.mozilla.org/en-US/firefox/addon/close-other-tabs-button/) | Adds a button to close all other tabs except the current one. I miss `⌥` + `⌘` + `W` (`Option` + `Command` + `W`) from Safari |
+
+![img-description](assets/posts/geeky-macos-setup-for-productivity/img/bonjourr.png)
+*Bonjourr as my Startup Page*
+
+And in case you wonder what theme I use, it's called [Firefox Alpenglow](https://addons.mozilla.org/en-US/firefox/addon/firefox-alpenglow/).
+
 ## Miscellaneous 
 
 - pomodoro
