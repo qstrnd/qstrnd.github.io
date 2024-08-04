@@ -354,8 +354,9 @@ I urge you to commit your dotfiles so that you never miss your configs on anothe
 
 Many principles that I follow in my approach in dealing with the command line were brought or solidified by the course called [The Missing Semester of Your CS Education](https://missing.csail.mit.edu/). It focuses on practical lessons, like how to work in command line, what are the most used command-line programs, how to write scripts and automate repetitive tasks with them, and more. Check it out!
 
-
 ## Code Editor
+
+
 
 ## Browser
 
@@ -383,7 +384,7 @@ There are other extensions that I like a lot and use daily. I'll describe them a
 
 | Extension | Description |
 | --- | --- |
-| [Vimium](https://vimium.github.io/) | A keyboard shortcut extension for navigation and control in the browser |
+| [Vimium](https://vimium.github.io/) | A keyboard shortcut extension for navigation and control in the browser. Nerdy but very cool! |
 | [Dark Reader](https://darkreader.org/) | Turns on dark mode for websites to reduce eye strain |
 | [Highlight by Trix](https://addons.mozilla.org/en-US/firefox/addon/highlight-by-trix/) | Allows you to highlight text on web pages for reference or emphasis. I use `⌥` + `H` (`Option` + `H`) to trigger it |
 | [Bonjourr - Minimalist Startpage](https://bonjourr.fr/) | A customizable, minimalist start page with weather and bookmarks (my favorite so far!) |
@@ -396,6 +397,13 @@ There are other extensions that I like a lot and use daily. I'll describe them a
 *Bonjourr as my Startup Page*
 
 And in case you wonder what theme I use, it's called [Firefox Alpenglow](https://addons.mozilla.org/en-US/firefox/addon/firefox-alpenglow/).
+
+#### Vimium
+
+Yes, this Vim-like extension. I want to say more about it. It's the reason why I highly reduced the usage of trackpad. I use it to switch between tabs, navigate inside the page, open bookmarks and so on. Below is a demo of one of its functions that highlights links on the webpage and allow to navigate to the link by pressing the corresponding keys. 
+
+![img-description](assets/posts/geeky-macos-setup-for-productivity/img/vimium.png)
+*Vimium extension mode after pressing **f** on a webpage*  
 
 ## Miscellaneous 
 
@@ -432,7 +440,7 @@ I do have to mention it! I think my Mac's screen is big enough to fit more text 
 ![img-description](assets/posts/geeky-macos-setup-for-productivity/img/moreSpace.png)
 *More Space*
 
-#### Keyboard Layout Mess
+#### Keyboard Input Source
 
 For Russian-speaking users, it can be convenient to use apps like [Puntoswitcher](https://yandex.ru/soft/punto/mac/?noredirect=1). It can be handy to remap what you've entered in English into Russian and vice versa. Not sure if it sends some data to Yandex, that's why I don't use it myself now.
 
