@@ -194,22 +194,156 @@ I also use [DevCleaner](https://github.com/vashpan/xcode-dev-cleaner) which is a
 ![img-description](assets/posts/geeky-macos-setup-for-productivity/img/devCleaner.png)
 *DevCleaner*
 
-
 ## Command Line
+
+Command line is something that is overlooked by many people, including developers. In most scenerios, what you can do in using command line, like browsing your files, committing git changes, installing programs and so on, can be done using a graphical interface. You should find out what's more convenient for you. 
+
+But there's also one thing I adore about the command line: it's a unified interface for everything possible. You just write a command to make the app do something. You can combine these commands, redirecting the output of one command as the input for other. Add complex conditions, that's how scripts are born. And so much more. I urge you to read more about the [Unix philosophy](https://en.wikipedia.org/wiki/Unix_philosophy), it's about exactly the same: make some simple blocks (commands in our case) and allow them to work together.
+
+So yes, command line, although a little old-fashioned, is simple and predictable. You find a new program, you check its commands with `program --help` or read its manual with `man program` and it's enough to get started. One can argue if it's really simpler than the graphical interface, but I can say that I sometimes find it harder to navigate to the right button that to type in the right command, especially with custom aliases for the most common use cases (more about it below).
+
+### Basics
+
+First of all, you don't have to repeat every command every time. Use `⌃` + `R` (`Control` + `R`) to search in your command history.
+
+If you need to repeat a command that you've just types (you may needed it when you need to rerun something as the superuser), type `!!`, as in `sudo !!`. If you need to repeat the last argument from the previous command, use `!$`, as in `cd !$`.
+
+Learn some shortcuts to navigate to the begining or end of line and to jump between words. I personally prefer `vi` mode which I enable with a plugin. See more about Vim below.
 
 ### iTerm
 
-### theme
+I use [iTerm](https://iterm2.com/features.html) almost for historical reasons. Probably the features that made me switch from the default Terminal app are full 24-bit and 256-color mode and more advances abilities to split panes. I just advice to check their website and see if there're any features you would miss in the deafult app.
 
-### aliases. ruby manager (?)
+![img-description](assets/posts/geeky-macos-setup-for-productivity/img/terminal.png)
+*iTerm*
 
-###
+### Appearance
 
-## Git
+As you might have noticed, I have a custom theme that I like a lot. It's called [Powerlevel10k](https://github.com/romkatv/powerlevel10k). It beautifully shortens the text for current working directory and highlights the current git branch. It has other awesome features which you might like, check them out. Many of them can be configured with an extremely convenient configuration wizard that is launches after installation.
 
-gitworkflow
-commit philosophy
-make everything a repository
+### Plugins
+
+Appearance is not the only thing you can customize. There are many plugins that your command line can be set up with, and some of them can be extremely useful.
+
+My personal favorite is [Oh My Zsh](https://ohmyz.sh/). It's not just a single extension, but rather a framework for easier management a magnitude of plugins and configurations. Shortly said: it makes the life much easier! I tried configuring my plugins manually but eventually decided to stick with Oh My Zsh. My theme, that I mentioned previously, is installed with it. As well as the plugins that I would like to mention:
+
+| Plugin          | Description                                                      |
+|-----------------|------------------------------------------------------------------|
+| [git](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git)           | Enhances Zsh with git-related aliases and functions              |
+| [colored-man-pages](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/colored-man-pages) | Adds colors to man page output for better readability      |
+| [alias-finder](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/alias-finder)  | Helps find and manage aliases                                    |
+| [aliases](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/aliases)       | Simplifies alias creation and usage                              |
+| [vi-mode](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/vi-mode)       | Enables vi key bindings in Zsh                                   |
+| [autojump](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/autojump)      | Quickly navigates to frequently used directories                 |
+| [pj](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/pj)            | Manages project directories                                      |
+| [fzf](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/fzf)           | Integrates the fuzzy finder tool fzf for command-line operations |
+
+[Here](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins) is an extensive list of all plugins that Oh My Zsh supports. Some of them are just aliases, while some vi-mode or fzf integrate into your shell. Try them out!
+
+#### Aliases
+
+Find what you do repeatedly. Make an alias! If you're just starting, I just suggest that you get around in the command line for a while and then run this command:
+
+```bash
+history | awk '{CMD[$2]++; count++;} END { for (a in CMD) printf "%d\t%d%%\t%s\n", CMD[a], CMD[a]/count*100, a;}' | sort -nr | head -n 10
+```
+
+It'll print your mostly used commands. Here are mine on my personal machine:
+
+```bash
+248	16%	gst
+132	8%	ll
+110	7%	cd
+108	7%	git
+81	5%	gaa
+71	4%	xed
+61	4%	gcmsg
+43	2%	..
+41	2%	bundle
+39	2%	code
+```
+
+It shows that my mostly used command is `gst` which is an alias for `git status`. `ll` is also an alias for `ls -lh` which nicely prints the content of the current directory with some useful information. Imagine how much time these aliases have spared me!
+
+Sometimes, easpecially when an alias is not your own, it may be hard to remember. That's why I use `alias-finder` plugin that mildly reminds me of the existing aliases that shorten the command I have just entered.
+
+![img-description](assets/posts/geeky-macos-setup-for-productivity/img/terminalStatus.png)
+*I've typed **git status** and got a hint at my **gst** alias*
+
+#### Scripts 
+
+Customize your shell's configuration file! Not only aliases can be added to it, but also some custom logic. When you need to do something before your shell session is started, you put it to your shell config file. For Zsh, it would be `zshrc` in your Home directory. What I provide below is just a random example of some repetitive tasks that can be managed this way. 
+
+If you've ever worked with ssh, you probably encountered the need to start the ssh agent in the background. That can be done with such command in your config file:
+```bash
+# Add ssh-agent for 
+eval "$(ssh-agent -s)" > /dev/null 2>&1
+```
+
+Another recent example: I found myself constantly `cd`ing to the `~/Developer` folder almost every time I opened iTerm. I already had the alias `cdd` for it but I decided to go further and write this little script:
+```bash
+# open Developer directory instead of HOME if it exists on current machine
+if [ "$PWD" = "$HOME" ]; then
+  if [ -d "$HOME/Developer" ]; then
+    cd "$HOME/Developer"
+  fi
+fi
+```
+
+So every time I open the terminal, I am in my favorite folder as my working directory! I addd some conditions because sometimes, when I open shell from VS Code as example and it opened the directory of the project I'm working on, I don't want to navigate to the Developer folder.
+
+#### Git
+
+I'd like to mention my git config separately since it's my primary activity in terminal. I mentioned the [git](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git) plugin for aliases that I use, most common being aliases for `git status`, `git commit --message`, `git push`, `git pull`, `git checkout`. 
+
+There are also more complex functions that are defined in my `gitconfig` under `[alias]` and been there for ages. Check this one:
+```bash
+ bclean = "!f() { DEFAULT=$(git default); git branch --merged ${1-$DEFAULT} | grep -v \" ${1-$DEFAULT}$\" | xargs git branch -d; }; f"
+```
+
+So every time I type `git bclean`, it deletes all branches that have been merged into the specified branch (or the default branch if none is specified), except for the currently checked-out branch.
+
+Another one that I often use:
+```bash
+bdone = "!f() { DEFAULT=$(git default); git checkout ${1-$DEFAULT} && git up && git bclean ${1-$DEFAULT}; }; f"
+```
+It does what `bclean` does plus checks out to the default branch which is often `main`, `master` or `develop`.
+
+I also like this one to pile up work in progress and quickly commit it:
+```bash
+save = !git add -A && git commit -m "SAVEPOINT"
+```
+
+And this one to clean correctly sync my submodules:
+```bash
+submod = "!f() { git submodule deinit -f . && git submodule update --init  && git submodule foreach --recursive git reset --hard  > /dev/null; }; f"
+```
+
+I mentioned above that I also see my current branch right in the terminal which helps me a lot. I also heavily use autocompletion that comes with Oh My Zsh: it helps me find the appropriate branch name, tag or even commit hash.
+
+If you're a new developer, I highly recommend you to read about [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) and use it extensively. Have some personal projects for learning after reading an article? Do not just write them and throw away! Make a single repository, make feature branches for separate learning projects, commit your work as you progress and merge it when it's ready. I honestly wish I'd started doing it earlier since I've lost some pieces of code that I nostalgically (and sometimes practically!) miss. By having such a repository for your learning projects, you can keep track of how you learn and progress which is important, even encouraging for the next achievements.
+
+#### Dotfiles Repo
+
+So many configs already. So many files to put them it. It may be hard to move to a new laptop and manually copy all your configurations. That's why some people use a separate git repository for their dotfiles and I'm among them (here's [mine](https://github.com/qstrnd/dotfiles), originally forked from [Holman's](https://github.com/holman/dotfiles)).
+
+Basically, it's just a repo for config files (or as many people would refer to them, dotfiles, since they usually start with a dot to make them hidden by default which is a common pattern for configuration files). 
+
+This particular dotfiles repo has some scripting magic, like this:
+
+> Anything with an extension of .zsh will get automatically included into your shell. Anything with an extension of .symlink will get symlinked without extension into $HOME when you run script/bootstrap.
+
+A symlink (short for symbolic link) is just a reference in your file directory to another file. It's very handy to link the actual config file with its expected place in the system, as in the example:
+```bash
+ln -s dotfiles/actualGitconfig ~/.gitconfig
+```
+
+I urge you to commit your dotfiles so that you never miss your configs on another machine!
+
+#### More
+
+Many principles that I follow in my approach in dealing with the command line were brought or solidified by the course called [The Missing Semester of Your CS Education](https://missing.csail.mit.edu/). It focuses on practical lessons, like how to work in command line, what are the most used command-line programs, how to write scripts and automate repetitive tasks with them, and more. Check it out!
+
 
 ## Code Editor
 
@@ -240,3 +374,10 @@ Tooling
 - puntoswitcher
 - daisydisk
 - wwdc
+
+
+
+
+gitworkflow
+commit philosophy
+make everything a repository
