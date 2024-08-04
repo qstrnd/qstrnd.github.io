@@ -329,7 +329,7 @@ And this one to clean correctly sync my submodules:
 submod = "!f() { git submodule deinit -f . && git submodule update --init  && git submodule foreach --recursive git reset --hard  > /dev/null; }; f"
 ```
 
-I mentioned above that I also see my current branch right in the terminal which helps me a lot. I also heavily use autocompletion that comes with Oh My Zsh: it helps me find the appropriate branch name, tag or even commit hash.
+I mentioned above that I also see my current branch right in the terminal which helps me a lot. I have stats like how far my local branch is ahead or behind the respective origin branch. I also heavily use autocompletion that comes with Oh My Zsh: it helps me find the appropriate branch name, tag or even commit hash.
 
 If you're a new developer, I highly recommend you to read about [Gitflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) and use it extensively. Have some personal projects for learning after reading an article? Do not just write them and throw away! Make a single repository, make feature branches for separate learning projects, commit your work as you progress and merge it when it's ready. I honestly wish I'd started doing it earlier since I've lost some pieces of code that I nostalgically (and sometimes practically!) miss. By having such a repository for your learning projects, you can keep track of how you learn and progress which is important, even encouraging for the next achievements.
 
