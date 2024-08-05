@@ -92,7 +92,7 @@ I would also like to get you acquainted with another app usage pattern that may 
 Most of us work with multiple apps, frequently switching between their windows. Some apps can have more than one window, so it may be cumbersome to keep focus on the ones that you really need at the moment. Over the years, I have tried different approaches: using a second monitor, assigning particular apps to particular virtual desktops, using Stage Manager, and just having everything on a single screen (I rarely even have the need to use a second monitor now).
 
 Every approach has pros and cons, and I'll elaborate on why the last one worked perfectly for me:
-- Predictability: as I mentioned, the shortcuts to open/switch to different apps make the workflow predictable - whenever I need to switch to the browser, I just press the associated shortcut. I never find myself pressing the shortcut only to find there is no window in the right place, as may happen with multiple desktops.
+- Predictability: as I mentioned, the shortcuts to open/switch to different apps make the workflow predictable — whenever I need to switch to the browser, I just press the associated shortcut. I never find myself pressing the shortcut only to find there is no window in the right place, as may happen with multiple desktops.
 - Flexibility: also the reason why I gave up on multiple desktops — sometimes I need different combinations of apps present on the same screen. It's simpler to keep everything on one desktop and change the layout (more about it below) according to specific needs.
 - Speed: I love macOS animations, they're really cute, but at the same time, they're a waste of precious seconds that is repeated throughout the day. That's why I don't like desktop switching, as well as the fancy Stage Manager.
 
@@ -135,7 +135,7 @@ I never use Full-screen Mode except for movies and videos that I really want to 
 
 Another staple feature, and one I am so deeply surprised to see many people are not aware of, is a clipboard history. It's especially useful when you're dealing with chunks of code and commands. It can also be a registry of quick-access info, such as your email address or your current task tickets (hello to Jira users).
 
-I've been using Raycast's built-in [Clipboard History](https://manual.raycast.com/core) since it's free and it works perfectly for me. It can work with different kinds of data (not only text-based), has previews (for example, for copied color names, images, or web articles), and stores your data for up to three months in the free-tier Raycast version.
+I've been using Raycast's built-in [Clipboard History](https://manual.raycast.com/core) since it's free and it works perfectly for me. To use it, I type `⇧` + `⌘` + `V` (`Shift` + `Command` + `V`). It can work with different kinds of data (not only text-based), has previews (for example, for copied color names, images, or web articles), and stores your data for up to three months in the free-tier Raycast version.
 
 ![img-description](assets/posts/geeky-macos-setup-for-productivity/img/clipboard.png)
 *A piece of my current clipboard history*
@@ -165,7 +165,7 @@ I prefer the Dock on the left side, but I temporarily put it on the bottom to ta
 ![img-description](assets/posts/geeky-macos-setup-for-productivity/img/dock.png)
 *My Dock*
 
-I already mentioned it and I’ll repeat: whenever I can, I launch/switch to apps and search for files with either shortcuts or search. But I still love the Dock to be present and never hide it (except for full screen).
+I already mentioned it and I’ll repeat: whenever I can, I launch/switch to apps and search for files with either shortcuts or Raycast. But I still love the Dock to be present and never hide it (except for full screen).
 
 ### Cleanup
 
@@ -382,15 +382,20 @@ Once the code is written, it may be time to refactor it. Symbol renaming, code e
 
 I once got to know the VIM way of working with text and it changed me a lot. [Here](https://vimhelp.org/) you can find extensive documentation on the VIM editor and I'll tell you only about some of the features I use the most.
 
-First of all, VIM introduces modes to your editing: Normal mode for navigation inside text, Insert mode for editing, Visual mode for selection. Secondly, its keys are designed in a way to be as convenient for you to type at speed as possible. That's why `hjkl` are used for moving the cursor (chances are, if you're proficient at touch typing, your index finger rests at `j`). Thirdly, you can observe some patterns that make memorization easier: some keys are easily remembered with mnemonics (like `d` for *delete* or `p` for *paste*); some commands can be combined, as you can do with operators (like delete) and motion keys, resulting in commands like `d3w` which can be read as *delete 3 words after cursor*.
+I rarely use VI or VIM on their own; I prefer VS Code and Xcode with all their enhancements like the navigation tree, tabs, multicursor modes, and more (though you can infinitely extend the basic VIM with plugins). But I do enable VIM commands.
 
-I rarely use VI or VIM on their own; I prefer VS Code and Xcode with all their enhancements like the navigation tree, tabs, multicursor modes, and more (though you can infinitely extend the basic VIM with plugins). But I do use VIM commands all the time and here is the list of some of them that I use most often:
+But let's talk for a while what's so special about VIM. First of all, VIM introduces modes to your editing: Normal mode for navigation inside text, Insert mode for editing, Visual mode for selection. Secondly, its keys are designed in a way to be as convenient for you to type at speed as possible. That's why `hjkl` are used for moving the cursor (chances are, if you're proficient at touch typing, your index finger rests at `j`). Thirdly, you can observe some patterns that make memorization easier: some keys are easily remembered with mnemonics (like `d` for *delete* or `p` for *paste*); some commands can be combined, as you can do with operators (like delete) and motion keys, resulting in commands like `d3w` which can be read as *delete 3 words after cursor*.
+
+Here is the list of some of the commands that I use most often:
 
 | Key | Description |
 | --- | --- |
 | Navigation in Normal Mode |
 | `j` and `k` | Move cursor down and up respectively  |
+| `Control` + `D` / `U` | Scroll down and up respectively |
 | `h` and `l` | Move cursor left and right respectively  |
+| `^` | Move to the first non-blank character of the line |
+| `$` | Move to the last character of the line |
 | `w` and `b` | Move to the beginning of the next or previous word respectively |
 | `f` and `F` and any key  | Move to the next or previous occurrence respectively of the given key |
 | `;` | Repeat `f` / `F` command (move to the next occurrence) |
@@ -398,17 +403,23 @@ I rarely use VI or VIM on their own; I prefer VS Code and Xcode with all their e
 | `zz` | Center the current line of text in the window |
 | `/` | Invoke search |
 | Editing in Normal Mode |
+| `i` and `a` | Switch to Insert mode before and after the current character respectively |
+| `I` and `A` | Switch to Insert mode at the beginning or end of current line respectively |
 | `d` | Delete what you specify after `d`. My favorite is `di)` which deletes the content inside parentheses (the surrounding characters can be different) |
 | `c` | Change what you specify after `c`. You can do the same magic as with `d` |
+| `r` | Replace the character under cursor |
+| `~` | Toggle case for the character under cursor |
 | `dd` | Remove the line completely |
 | `D` | Remove the contents from your cursor to the end of the line |
-| `C` | Change the contents from your cursor to the end of the line (it means delete and go into editing mode) |
+| `C` | Change the contents from your cursor to the end of the line (it means delete and switch to Insert mode) |
 | `.` | Repeat the last command |
 | `o` and `O` | Enter editing mode with the new line below or above your current line respectively |
 | `yy` | Copy (or yank) the whole line |
 | `p` or `P` | Paste the contents after or before the cursor (or current line if the whole line is in the buffer) |
 
-These are just a few examples. Besides the comprehensive documentation, I recommend you keep at hand the [VIM cheat sheet](https://vim.rtorr.com/). Also note it's completely okay to feel frustrated the first time; that's why I recommend learning VIM step by step in your current IDE or code editor and seeing what saves your time indeed.
+These are just a few examples. There are also interesting commands for Visual mode, features like macros, registers, split views, search and replace, and more.
+
+Besides the comprehensive documentation, I recommend you keep at hand the [VIM cheat sheet](https://vim.rtorr.com/). Also note it's completely okay to feel frustrated the first time; that's why I recommend learning VIM step by step in your current IDE or code editor and seeing what saves your time indeed.
 
 > If you use VIM heavily, you may consider remapping Caps Lock to Esc. You can easily do it in [Settings](https://stackoverflow.com/a/8437594/9850339).
 {: .prompt-tip }
@@ -427,7 +438,7 @@ I expect the editor to not only show me line numbers but also highlight which pa
 
 #### Debug Tools
 
-Debug tools can be varied and complex. As an Xcode user, I explored the llvm debugger commands, breakpoints of different kinds, View Debugger for UI debugging and Memory Graph for memory leak detection, Xcode Instruments for performance profiling, and more. Make sure you're at least familiar with the debug tools that are integrated into your IDE.
+Debug tools can be varied and complex. As an Xcode user, I explored the LLDB (LLVM Debugger) commands, breakpoints of different kinds, View Debugger for UI and Memory Graph for memory leak detection, Xcode Instruments for performance profiling, and more. Make sure you're at least familiar with the debug tools that are integrated into your IDE.
 
 #### Extensions
 
@@ -498,7 +509,7 @@ If you feel your Menu Bar is a little cluttered, you can explore the [Bartender]
 
 ### Floating Notes
 
-I use Notion as my note-taking app, but sometimes there's the need to make and show notes in some lighter shape. That's where Raycast's built-in Floating Notes come in handy. I use it for words that I jot down while watching a movie in a foreign language, some thoughts not to forget later, or even meeting notes when I share my screen and don't want to accidentally show my other notes since they may be private. Here's how it looks right now, for example:
+I use Notion as my note-taking app, but sometimes there's the need to make and show notes in some lighter shape. That's where Raycast's built-in Floating Notes come in handy, which I invoke with - `⌃` + `⌘` + `N` (`Control` + `Command` + `N`). I use it for words that I jot down while watching a movie in a foreign language, some thoughts not to forget later, or even meeting notes when I share my screen and don't want to accidentally show my other notes since they may be private. Here's how it looks right now, for example:
 
 ![img-description](assets/posts/geeky-macos-setup-for-productivity/img/floatingNotes.png)
 *Floating Notes*
