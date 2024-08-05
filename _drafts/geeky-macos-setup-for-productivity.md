@@ -110,7 +110,7 @@ Simple as that.
 #### Layout
 
 > Starting from macOS Sequoia, there's a feature called [Window tiling](https://9to5mac.com/2024/07/19/use-automatic-window-tiling-macos-sequoia/). I haven't used it at the time of writing, but I value it as a nice move from the perspective of OS development, and maybe it can even replace third-party solutions.
-{: .prompt-tip }
+{: .prompt-info }
 
 There are different window managers available. Raycast comes with a built-in [Window Management](https://www.raycast.com/core-features/window-management) functionality. I never used this one as I saw I had to set shortcuts for every layout position manually.
 
@@ -409,6 +409,9 @@ I rarely use VI or VIM on their own; I prefer VS Code and Xcode with all their e
 | `p` or `P` | Paste the contents after or before the cursor (or current line if the whole line is in the buffer) |
 
 These are just a few examples. Besides the comprehensive documentation, I recommend you keep at hand the [VIM cheat sheet](https://vim.rtorr.com/). Also note it's completely okay to feel frustrated the first time; that's why I recommend learning VIM step by step in your current IDE or code editor and seeing what saves your time indeed.
+
+> If you use VIM heavily, you may consider remapping Caps Lock to Esc. You can easily do it in [Settings](https://stackoverflow.com/a/8437594/9850339).
+{: .prompt-tip }
 
 #### Multiple Cursors
 
