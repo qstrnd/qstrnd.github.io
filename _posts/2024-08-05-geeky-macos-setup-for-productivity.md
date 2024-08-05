@@ -1,10 +1,12 @@
 ---
 layout: post
 title: Geeky macOS Setup for Productivity
-tags: [macOS, productivity]
+tags:
+- macOS
+- productivity
 author: andy
+date: 2024-08-05 20:15 +0400
 ---
-
 In this post, I would like to share my macOS setup, which I have developed over the years through my experience in programming and general computer usage. Every small amendment to my common routines stemmed from a fundamental need: how can I eliminate the time spent on repetitive actions? Initially, not everything was obvious, and it took time for me to realize that it was even possible. This is why I am sharing it and hoping that you will find some tips and tricks that will work well for you.
 
 I’d like to note that I describe my own setup and don’t urge you to copy it word for word. You may tweak individual shortcuts as you want, and you may skip whole sections altogether. The goal is to show you what I found useful and what you might not have thought of, and in no way to force you to thoughtlessly copy the approaches. Use this info to help you build your own! Believe me, it’s a fun, never-ending story.
