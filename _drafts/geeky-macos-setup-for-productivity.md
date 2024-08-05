@@ -212,7 +212,7 @@ But there's also one thing I adore about the command line: it's a unified interf
 
 So yes, command line, although a little old-fashioned, is simple and predictable. You find a new program, you check its commands with `program --help` or read its manual with `man program` and it's enough to get started. One can argue if it's really simpler than the graphical interface, but I can say that I sometimes find it harder to navigate to the right button that to type in the right command, especially with custom aliases for the most common use cases (more about it below).
 
-### Basics
+#### Basics
 
 First of all, you don't have to repeat every command every time. Use `⌃` + `R` (`Control` + `R`) to search in your command history.
 
@@ -220,18 +220,18 @@ If you need to repeat a command that you've just types (you may needed it when y
 
 Learn some shortcuts to navigate to the begining or end of line and to jump between words. I personally prefer `vi` mode which I enable with a plugin. See more about Vim below.
 
-### iTerm
+#### iTerm
 
 I use [iTerm](https://iterm2.com/features.html) almost for historical reasons. Probably the features that made me switch from the default Terminal app are full 24-bit and 256-color mode and more advances abilities to split panes. I just advice to check their website and see if there're any features you would miss in the deafult app.
 
 ![img-description](assets/posts/geeky-macos-setup-for-productivity/img/terminal.png)
 *iTerm*
 
-### Appearance
+#### Appearance
 
 As you might have noticed, I have a custom theme that I like a lot. It's called [Powerlevel10k](https://github.com/romkatv/powerlevel10k). It beautifully shortens the text for current working directory and highlights the current git branch. It has other awesome features which you might like, check them out. Many of them can be configured with an extremely convenient configuration wizard that is launches after installation.
 
-### Plugins
+#### Plugins
 
 Appearance is not the only thing you can customize. There are many plugins that your command line can be set up with, and some of them can be extremely useful.
 
@@ -356,7 +356,77 @@ Many principles that I follow in my approach in dealing with the command line we
 
 ## Code Editor
 
+If you're a developer, you know that code editor is that app you can spend a lot of time with. That's why it's crucial to know it well and be adept at using it.
 
+I recommend you to examine the documentation, learn what features your IDE or code editor of preference provides, how it can be extented, and keep an eye on the updates. For example, here's a recent WWDC's session [Xcode Essentials](https://developer.apple.com/videos/play/wwdc2024/10181/) for fellow iOS / macOS devs, it can be used as nice introduction (but read the docs nevertheless).
+
+I would recommend you to start with the following:
+1. Find out if there is a prompt to quickly open commands (I already mentioned it, but it's worth repeating: Command Palette in VS Code, or Quick Actions in Xcode).
+2. Learn what you generally need to do: navigate between files, open multiple editors, view who's to blame for this line of code, etc.
+3. If you're already familiar with another editor, you can use tricks to accustom yourself quicker to the new one by setting the same shortcuts. For example, [this](https://marketplace.visualstudio.com/items?itemName=stevemoser.xcode-keybindings) VS Code extension can be convenient for Xcode users.
+4. Find how to do the same quicker, by memorizing new shortcuts and ways to work with the app.
+
+I will highlight only a few features that I expect to find in a modern editor.
+
+#### Guidance
+
+Good editor should help you code, so it needs to have features like code completion, quick symbol navigation, integrated documentation, even AI-based copilot. That is, everything to help you code with the minimal possible effort from you.
+
+#### Refactoring Tools
+
+Once the code is written, it may be time to refactor it. Symbol renaming, code extraction, method signature correction and so on.
+
+#### VIM Mode
+
+I once got to know the VIM way of working with text and it changed me a lot. [Here](https://vimhelp.org/) you can find extensive documentation on the VIM editor and I'll tell you only about some of the features I use the most.
+
+First of all, VIM introduces modes to your editing: Normal mode for navigation inside text, Insert mode for editing, Visual mode for selection. Secondly, it's keys are designed in a way to be as convenient for you to type at speed as possible. That's why `hjkl` are used for moving the cursor (chances are, if you're proficient at touch typing, your index finger rests at `j`). Thirdly, you can observe some patterns that make memorization easier: some keys are easily remembered with mnemonics (like `d` for *delete* or `p` for *paste*); some commands can be combined, as you can do with operators (like delete) and motion keys, resulting in commands like `d3w` which can be read as *delete 3 words after cursor`.
+
+I rarely use VI or VIM in their own, I prefer VS Code and Xcode with all their enhancements like navigation tree, tabs, multicursor modes and more (though you can infinitely extend the basic VIM with plugins). But I do use VIM commands all the time and here is the list of some of them that I use most often:
+
+| Key | Description |
+| --- | --- |
+| Navigation in Normal Mode |
+| `j` and `k` | Move cursor down and up respectively  |
+| `h` and `l` | Move cursor left and rigth respectively  |
+| `w` and `b` | Move to the beginning of the next or previous word respectively |
+| `f` and `F` and any key  | Move to the next or previous occurrence respectively of the given key |
+| `;` | Repeat `f` / `F` command (move to the next occurrence) |
+| `gg` or `G` | Go to the very top or bottom of the file |
+| `zz` | Center the current line of text in the window |
+| `/` | Invoke search |
+| Editing in Normal Mode |
+| `d` | Delete what you specify after `d`. My favorite is `di)` which deletes the content inside curly brackets (the surrounding can be different) |
+| `c` | Change what you specify after `c`. You can do the same magic as with `d` |
+| `dd` | Remove the line completely |
+| `D` | Remove the contents from your cursor to the end of the line |
+| `C` | Change the contents from your cursor to the end of the line (it means delete and go into editing mode) |
+| `.` | Repeat the last command |
+| `o` and `O` | Enter editing mode with the new line below or above your current line respectively |
+| `yy` | Copy (or yank) the whole line |
+| `p` or `P` | Paste the contents after or before the cursor (or current line if the whole line is in buffer) |
+
+These are just a few examples. Besides the comprehensive documentation, I recommend you to keep at hand the [VIM cheat sheet](https://vim.rtorr.com/). Also note it's completely okay to feel frustrated for the first time, that's why I recommend to learn VIM step by step in your current IDE or code editor and see what saves your time indeed.
+
+#### Multiple Cursors
+
+Multiple cursors is a must have. Sometimes I miss it in the document editors. Allows you to solve repeated problem in many lines simultaneously.
+
+#### Split Views
+
+The ability to open different editing windows side by side is a must-have as well.
+
+#### Useful Side Info
+
+I expect the editor not only show me line numbers, but also highlight which part of code is to be committed, who is the author of this line and in which commit it was created, what definitions does this file have and so on. That's why I enable features like a Mini-app and memorize shortcuts like `⌃` + `6` (`Control` + `6`) in Xcode (which allows to search through document items inside the file).
+
+#### Debug Tools
+
+Debug tools can be vary and complex. As Xcode user, I explored the llvm debugger commands, breakpoints of different kinds, View Debugger for UI-debugging and Memory Graph for memory leak detection, Xcode Instruments for performance profiling and more. Make sure you're at least familiar with the debug tools that are integrated in your IDE.
+
+#### Extensions
+
+Extensions are cool. I wish there were more extensions for Xcode. And I use them a lot in VS Code. I think the prime reason why people use VS Code for everything is because it's extremely customizable with different kinds of extensions for every imaginable tech stack. Take a look at what's popular for your stack and try it out. My favorite is VIM mode, of course.
 
 ## Browser
 
@@ -409,19 +479,19 @@ Yes, this Vim-like extension. I want to say more about it. It's the reason why I
 
 I would assume that you use macOS so below there will be links to the macOS App Store if the will be no separate website for the app.
 
-#### Pomodoro Timer
+### Pomodoro Timer
 
 I use the [Pomodoro Technique](https://en.wikipedia.org/wiki/Pomodoro_Technique) at work and for personal activities. I work concentrated during 25 minutes, then make a pause for 5, then repeat for times, with the last time having a pause of 15 minutes instead. There are different applications, and I decided to stick with Raycast's buil-in Pomodoro. A also have a nice timer in the Menu Bar that comes with it.
 
-#### Time Tracking
+### Time Tracking
 
 Sometimes I use [Toggl](https://toggl.com/) to track how much time I devote to different projects and endeavors. It's a nice cross-platform app, it supports features like pomodoro and billing, so it's worth giving a try.
 
-#### Menu Bar
+### Menu Bar
 
 If you feel your Menu Bar is a little cluttered, you can explore [Bartender](https://www.macbartender.com/) app. I don't use it, but I once tried and the idea itself was funny: to customize when and where you see the menu items in the upper-right corner of your screen. You can hide them, show different sets of them in different modes, customize spacing in between and more.
 
-#### Floating Notes
+### Floating Notes
 
 I use Notion as my note-taking app, but sometimes there's the need to make and show notes in some lighter shape. That's where Raycast's built-in Floating Notes come in handy. I use it for the words that I jot down while watching a movie in a foreign language, some thought not to forget later, or even meeting notes when I share my screen and don't want to accitentally show my other notes since they may be private. Here's how it look right now for example:
 
@@ -430,7 +500,7 @@ I use Notion as my note-taking app, but sometimes there's the need to make and s
 
 Apple's Quick Notes are good as well, but I don't use them since they appeared after I learned about Floating Notes.
 
-#### More Space
+### More Space
 
 I do have to mention it! I think my Mac's screen is big enough to fit more text and elements, so I go to the Display settings and enable higher rosolution (under More Space). Here you can compare it and decide wha't better for you:
 
@@ -440,29 +510,29 @@ I do have to mention it! I think my Mac's screen is big enough to fit more text 
 ![img-description](assets/posts/geeky-macos-setup-for-productivity/img/moreSpace.png)
 *More Space*
 
-#### Keyboard Input Source
+### Keyboard Input Source
 
-For Russian-speaking users, it can be convenient to use apps like [Puntoswitcher](https://yandex.ru/soft/punto/mac/?noredirect=1). It can be handy to remap what you've entered in English into Russian and vice versa. Not sure if it sends some data to Yandex, that's why I don't use it myself now.
+For Russian-speaking users, it can be convenient to use apps like [Punto Switcher](https://yandex.ru/soft/punto/mac/?noredirect=1). It can be handy to remap what you've entered in English into Russian and vice versa. Not sure if it sends some data to Yandex, that's why I don't use it myself now.
 
-#### Xcodes Management
+### Xcodes Management
 
 If you need to manage multiple installations of Xcode (which can be common at work), thre's a nice app called [Xcodes](https://github.com/XcodesOrg/XcodesApp). You can install and remove different versions and control when to update.
 
 ![img-description](assets/posts/geeky-macos-setup-for-productivity/img/xcodes.png)
 *Xcodes*  
 
-#### WWDC
+### WWDC
 
 You can access WWDC videos with Apple's official [website](https://developer.apple.com/videos/all-videos/) or [app](https://apps.apple.com/us/app/apple-developer/id640199958), but I'd recommend using this unofficial [WWDC app](https://github.com/insidegui/WWDC). It has really nice search, ability to make a watch list, bookmark sessions and add notes to them.
 
 ![img-description](assets/posts/geeky-macos-setup-for-productivity/img/wwdc.png)
 *Unofficial WWDC app*
 
-#### Currency Conversion
+### Currency Conversion
 
 I just type something like `50 EUR to AMD` and it works out of the box. I think it's not even a Raycast feature but the system search feature, which is available even on iOS.
 
-#### Diagnostics & Stats
+### Diagnostics & Stats
 
 I don't use widgets or special tools for diagnostics. The most "advanced" stuff I do here is to check what cycle count my battery has. But I do use Activity Monitor sometimes, mostly to find out what makes my Mac lag sometimes (and it goes lag, I experience crashes sometimes and so on — nothing is perfect).
 
