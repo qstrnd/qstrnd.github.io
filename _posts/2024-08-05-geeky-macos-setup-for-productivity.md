@@ -79,7 +79,7 @@ In-app search is the primary reason why I use different Raycast extensions, but 
 
 ### Commands
 
-Whenever you need something, you usually have two ways: click through app launchers, folders, menus, and so on or search for it. As you have probably guessed, I prefer the latter for speed. But I'm not that crazy to remember *every* possible shortcut in the system. That's where search comes in handy as my ultimate guide.
+Whenever you need something, you usually have two ways: a long one, such as clicking through app launchers, folders, and menus, and a short one, like pressing a combination of keys (literally, a shortcut). As you have probably guessed, I prefer the latter for speed. However, I’m not so crazy as to remember *every* possible shortcut in the system. That’s where the search function comes in handy as my ultimate guide.
 
 Want to lock the screen? Open Raycast and type "lock" instead of remembering the shortcut. Want to open Privacy & Security settings to allow the launch of some recently installed app? Just type in "Privacy" and proceed directly to that part of the Settings app. "Hide all apps"? Here you go! You get the idea. Search is usually faster and it doesn't take as much effort as exact shortcut memorization.
 
