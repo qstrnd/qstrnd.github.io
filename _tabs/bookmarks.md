@@ -7,6 +7,19 @@ order: 1
 > Please note that this is a list of my personal bookmarks! I’ll be saving articles I like in the order I read them.
 {: .prompt-tip }
 
+# Jan 2025
+
+#### Build Tools
+- [objc.io Issue 6: Build Tools](https://www.objc.io/issues/6-build-tools/) — a great series of articles to get an overview of tools that enable the build process for Xcode project:
+    - [The Build Process](https://www.objc.io/issues/6-build-tools/build-process/) — breaks down the iOS/macOS build process, explaining how source code is transformed into executable binaries through preprocessing, compiling, assembling, and linking.
+    - [The Compiler](https://www.objc.io/issues/6-build-tools/compiler/) — introduces the workings of compilers, focusing on Clang and LLVM, explaining steps from parsing source code to generating optimized machine code.
+    - [Mach-O Executables](https://www.objc.io/issues/6-build-tools/mach-o-executables/) — explores the structure of Mach-O files, the executable format on Apple platforms, detailing components like headers, segments, and the symbol table; a little outdated in some details (for example, Mac’s architecture is now ARM), but still great for understanding the general structure of `.o`-files and binary executables.
+    - [CocoaPods Under the Hood](https://www.objc.io/issues/6-build-tools/cocoapods-under-the-hood/) — explains how CocoaPods manages third-party library integration in Xcode projects, ensuring seamless builds by modifying project files.
+- [WWDC '18 — Behind the Scenes of the Xcode Build Process](https://wwdcnotes.com/documentation/wwdcnotes/wwdc18-415-behind-the-scenes-of-the-xcode-build-process/) — notes for the WWDC video that has probably already disappeared from the internet. May be hard to read because of its brevity, but I found some info useful. Here's [another article](https://suelan.github.io/2020/07/05/20200705Behind-the-Scenes-of-the-%E2%80%A2Xcode-Build-Process/) based on the same session, which I found more coherent — plus, it has more pictures.
+
+#### Other
+- [SE-0302 — `Sendable` and `@Sendable` closures](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0302-concurrent-value-and-concurrent-closures.md) — a proposal that explains one of the most important concepts of Swift 5, defining a value that can be passed safely across concurrency domains. Love the extensive examples.
+
 # Dec 2024
 
 - [Apple's Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/) — took me over a week of evening reading, but it was definitely worth it. Just enjoyed brushing up on the concepts and honestly was impressed by the level of detail even a minor interface element can have. It’s no doubt the Bible for every iOS developer.
