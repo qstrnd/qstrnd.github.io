@@ -7,6 +7,12 @@ order: 1
 > Please note that this is a list of my personal bookmarks! I’ll be saving articles I like in the order I read them.
 {: .prompt-tip }
 
+# Feb 2025
+
+- [Swift 4 Weak References](https://www.mikeash.com/pyblog/friday-qa-2017-09-22-swift-4-weak-references.html) — a nice post by Mike Ash about Swift reference counters. I reread this from time to time.
+- [ARC in Swift: Basics and beyond](https://developer.apple.com/videos/play/wwdc2021/10216) — a WWDC video with a detailed explanation. Also available [on WWDC Notes](https://wwdcnotes.com/documentation/wwdcnotes/wwdc21-10216-arc-in-swift-basics-and-beyond).
+
+
 # Jan 2025
 
 #### Build Tools
