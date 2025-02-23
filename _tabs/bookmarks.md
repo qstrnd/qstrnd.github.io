@@ -9,6 +9,7 @@ order: 1
 
 # Feb 2025
 
+- [📺 The Most Common LeetCode Patterns](https://www.youtube.com/watch?v=RYT08CaYq6A) — A good video, and I can confirm from my almost two-month-long LeetCode streak that these patterns are useful to know.
 - [Swift 4 Weak References](https://www.mikeash.com/pyblog/friday-qa-2017-09-22-swift-4-weak-references.html) — a nice post by Mike Ash about Swift reference counters. I reread this from time to time.
 - [ARC in Swift: Basics and beyond](https://developer.apple.com/videos/play/wwdc2021/10216) — a WWDC video with a detailed explanation. Also available [on WWDC Notes](https://wwdcnotes.com/documentation/wwdcnotes/wwdc21-10216-arc-in-swift-basics-and-beyond).
 - [Apple's Privacy Features](https://www.apple.com/privacy/features/) — I found this website interesting to explore, both as a developer and a client. I consider privacy features important, and what I like about Apple is how much attention they put into this topic.
