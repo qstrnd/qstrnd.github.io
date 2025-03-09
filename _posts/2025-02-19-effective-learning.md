@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Effective Learning
+tags: 
+- productivity
 date: 2025-02-19 21:40 +0100
 ---
 Is there a best strategy to learn effectively regardless of the field of knowledge, be it learning how to solve complex algorithmic problems or mastering a foreign language? I'm trying to handle both, and I see some common patterns. It's not new knowledge, but I find it useful to briefly lay it out here.
