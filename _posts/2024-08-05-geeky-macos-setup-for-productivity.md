@@ -6,6 +6,7 @@ tags:
 - productivity
 author: andy
 date: 2024-08-05 20:15 +0400
+last_modified_at: 2025-03-09 11:40 +0100
 ---
 In this post, I would like to share my macOS setup, which I have developed over the years through my experience in programming and general computer usage. Every small amendment to my common routines stemmed from a fundamental need: how can I eliminate the time spent on repetitive actions? Initially, not everything was obvious, and it took time for me to realize that it was even possible. This is why I am sharing it and hoping that you will find some tips and tricks that will work well for you.
 
@@ -44,7 +45,6 @@ My current shortcuts, each starting with `⌃` + `⌥` + `⌘` (`Control` + `Opt
 | `,` | ChatGPT | `,` is just a convenient key that my middle finger can reach easily |
 | `V` | Visual Studio Code | I use it for scripting, viewing text-based files, and writing this blog post |
 | `B` | Firefox | The **B**rowser that I use |
-| `T` | Telegram | Extremely convenient cross-platform messenger |
 | `M` | Spotify | My favorite **M**usic player |
 | `N` | Notion | My current **N**ote-taking app |
 | `J` | IntelliJ IDEA | For Kotlin programming |
@@ -54,6 +54,13 @@ My current shortcuts, each starting with `⌃` + `⌥` + `⌘` (`Control` + `Opt
 | `D` | Diagrams.net (formerly draw.io) | I occasionally draw UML **d**iagrams with it |
 | `C` | Anki | I use it to study with **c**ards and spaced repetition |
 | `P` | Proxyman | A **p**roxy tool for debugging and mocking network responses |
+
+> As of March 2025, I updated my approach, and now every persistent app on my Dock is split into triplets. The first triplet is associated with the column of keys Y, H, N, the second with U, J, M, and so on. I borrowed VIM’s notion that the keys H, J, K, and L are the ones closest to the resting position of one’s fingers on the keyboard, which makes them fast to access. Another thing I like is that since the keys are now associated with a specific position in the Dock, I can easily swap out apps if needed without having to create a new semantic shortcut that might be hard to coin or type. The full shortcut still comprises `⌃` + `⌥` + `⌘`.
+{: .prompt-info }
+
+![img-description](assets/posts/geeky-macos-setup-for-productivity/img/updated-dock.png)
+*My Dock and the corresponding keys to open each application*
+
 
 ### Effective Search
 
