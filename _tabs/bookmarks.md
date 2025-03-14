@@ -7,14 +7,18 @@ order: 1
 > Please note that this is a list of my personal bookmarks! I’ll be saving articles I like in the order I read them.
 {: .prompt-tip }
 
-# Feb 2025
+# Mar '25
+
+- [SE-0466 — Control default actor isolation inference](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0466-control-default-actor-isolation.md) — A proposal introducing default actor isolation to make Swift 6 data-race safety more approachable; this is one of the steps outlined by the Swift team for the upcoming year.
+
+# Feb '25
 
 - [📺 The Most Common LeetCode Patterns](https://www.youtube.com/watch?v=RYT08CaYq6A) — A good video, and I can confirm from my almost two-month-long LeetCode streak that these patterns are useful to know.
 - [Swift 4 Weak References](https://www.mikeash.com/pyblog/friday-qa-2017-09-22-swift-4-weak-references.html) — a nice post by Mike Ash about Swift reference counters. I reread this from time to time.
 - [ARC in Swift: Basics and beyond](https://developer.apple.com/videos/play/wwdc2021/10216) — a WWDC video with a detailed explanation. Also available [on WWDC Notes](https://wwdcnotes.com/documentation/wwdcnotes/wwdc21-10216-arc-in-swift-basics-and-beyond).
 - [Apple's Privacy Features](https://www.apple.com/privacy/features/) — I found this website interesting to explore, both as a developer and a client. I consider privacy features important, and what I like about Apple is how much attention they put into this topic.
 
-# Jan 2025
+# Jan '25
 
 #### Build Tools
 - [objc.io Issue 6: Build Tools](https://www.objc.io/issues/6-build-tools/) — a great series of articles to get an overview of tools that enable the build process for Xcode project:
@@ -32,7 +36,7 @@ The MacStories Review](https://www.macstories.net/stories/ios-and-ipados-18-the-
 #### Other
 - [SE-0302 — `Sendable` and `@Sendable` closures](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0302-concurrent-value-and-concurrent-closures.md) — a proposal that explains one of the most important concepts of Swift 5, defining a value that can be passed safely across concurrency domains. Love the extensive examples.
 
-# Dec 2024
+# Dec '24
 
 - [Apple's Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/) — took me over a week of evening reading, but it was definitely worth it. Just enjoyed brushing up on the concepts and honestly was impressed by the level of detail even a minor interface element can have. It’s no doubt the Bible for every iOS developer.
 - [App Store Review Guidelines](https://developer.apple.com/app-store/review/guidelines/) — a must-read for every developer who is about to submit their app to the App Store. I just reviewed it today and liked the clear language that Apple uses here.
