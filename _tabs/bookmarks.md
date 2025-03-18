@@ -10,6 +10,7 @@ order: 1
 # Mar '25
 
 - [SE-0466 — Control default actor isolation inference](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0466-control-default-actor-isolation.md) — A proposal introducing default actor isolation to make Swift 6 data-race safety more approachable; this is one of the steps outlined by the Swift team for the upcoming year.
+- [SE-0461 — Run nonisolated async functions on the caller's actor by default](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0461-async-function-isolation.md#executioncaller-functions) — A proposal to control if an async function called from the actor context should be run within the same async context. I remember that I was bewildered when I examined this behavior for the first time, because the only docs I was able to find (much later) were fleshed out in a different proposal [SE-0338 Clarify the Execution of Non-Actor-Isolated Async Functions](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0338-clarify-execution-non-actor-async.md).
 
 # Feb '25
 
