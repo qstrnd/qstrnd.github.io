@@ -7,6 +7,10 @@ order: 1
 > Please note that this is a list of my personal bookmarks! I’ll be saving articles I like in the order I read them.
 {: .prompt-tip }
 
+# Apr '25
+
+- [How to inspect .ipa files and secure your iOS app from common mistakes](https://www.artemnovichkov.com/blog/how-to-inspect-ipa-files) — ... or why one should never store secrets on the client.
+
 # Mar '25
 
 - [SE-0466 — Control default actor isolation inference](https://github.com/swiftlang/swift-evolution/blob/main/proposals/0466-control-default-actor-isolation.md) — A proposal introducing default actor isolation to make Swift 6 data-race safety more approachable; this is one of the steps outlined by the Swift team for the upcoming year.
