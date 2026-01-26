@@ -2,7 +2,6 @@
 date: 2024-07-21 17:45:00 +0400
 tags: [thoughts]
 author: andy
-pin: true
 title: A Short Introduction
 ---
 This post is just the start of a long journey, as I hope. If you’ve somehow come across this blog, liked it, and want to find out more about its origin, you can read this post where I explain my motivation behind it all. I also intend to use it as a reminder for myself if I ever feel the longing to give up.
