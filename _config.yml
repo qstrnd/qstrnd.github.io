@@ -9,9 +9,9 @@ lang: en
 # Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
 timezone: Europe/Berlin
 
-title: Andy Iakovlev | iOS, Swift, and more
+title: Andy Iakovlev
 
-tagline: Notes on app development and life
+tagline: iOS, Swift, and more
 
 description: >- 
   A personal blog about Swift, iOS, team leading, and life in general by Andrei Iakovlev (Andy for short).
