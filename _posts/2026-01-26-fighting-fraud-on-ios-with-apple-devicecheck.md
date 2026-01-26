@@ -6,7 +6,7 @@ tags:
 - Swift
 - Security
 - DeviceCheck
-date: 2025-01-26
+date: 2026-01-26
 ---
 
 Fraud prevention is a critical concern for mobile apps, especially when dealing with features that involve rewards, ads, or premium content. Once an iOS app is released, it can be reverse-engineered or modified to bypass ads, unlock premium features, or cheat in gameplay. This is where Apple's DeviceCheck framework comes into play.
